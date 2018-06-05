@@ -37,4 +37,11 @@ it('should place elements of the same value next to each other', () => {
   let expectedArray = [3, 3, 5, 5, 5, 6, 7, 10, 15];
   expect(quickSort(array)).to.deep.equal(expectedArray);
 })
+
+it.only('should be able to handle a very large array of numbers', () => {
+ let array = helper(1000)
+ let expectedArray = quickSort(array)
+
+ expect(quickSort(array)).to.deep.equal(expectedArray);
+})
 })

@@ -37,6 +37,9 @@ it('should place elements of the same value next to each other', () => {
 })
 
 it('should be able to handle a very large array of numbers', () => {
+ let array = helper(1000)
+ let expectedArray = array.sort()
 
+ expect(bubbleSort(array)).to.deep.equal(expectedArray);
 })
 })
